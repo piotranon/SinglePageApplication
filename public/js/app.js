@@ -39239,7 +39239,6 @@ var routes = [{
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   base: '',
-  // eslint-disable-line
   routes: routes
 }); //check is user is logged in
 
