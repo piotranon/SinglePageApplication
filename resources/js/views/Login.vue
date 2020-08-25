@@ -88,11 +88,11 @@ export default {
 					this.$router.push({ name: "About" });
 				})
 				.catch(function (error) {
-					currentObj.output = error;
-					currentObj.errors = error.response.data
-						? error.response.data.errors
-						: {};
-					currentObj.message = error.response.data.message;
+					currentObj.message = "";
+					console.log(error.response.data.message);
+					error.response.data.message.forEach(function (message) {
+						currentObj.message += message;
+					});
 				});
 		},
 	},
